@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Username and Password Checker</title>
+</head>
+<body>
+  <h1>Username and Password Checker</h1>
+
+  <script>
+    // Define a function to check the username and password
+    function checkCredentials(userId, password) {
+      // Check if the username and password are correct
+      if (userId === "admin" && password === "secret") {
+        return true;
+      } else {
+        return false;
+      }
+    }
+
+    // Prompt the user for their username and password
+    const userId = prompt("Enter your username: ");
+    const password = prompt("Enter your password: ");
+
+    // Check the credentials
+    const credentialsValid = checkCredentials(userId, password);
+
+    // Display a message to the user based on the result of the check
+    if (credentialsValid) {
+      alert("Welcome admin!");
+    } else {
+      alert("BAD LOGIN CREDENTIALS");
+    }
+  </script>
+</body>
+</html>
